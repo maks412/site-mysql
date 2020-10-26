@@ -21,7 +21,7 @@ function openForm() {
       document.getElementById("txtHint").innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "getcustomer.php?q="+str, true);
+    xhttp.open("GET", "con.php?q="+str, true);
     xhttp.send();
   }
   
