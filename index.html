@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRNG</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="pic">
+        <h1>Welcome to FRNG</h1>
+        <div class="word">
+            <p>FRNG "flower energy"</p>
+            <p>by Elnura</p>
+        </div>
+        <div class="bt">
+            <button id="btn_white" onclick="openForm()" class="btn btn-outline-light btn-lg">JOIN or LogIn</button>
+        </div>
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login</h1>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="btn" onclick="showCustomer(email)">Login</button>
+          <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+    <h2 id="txtHint"></h2>
+
+    <div class="items">
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="images/aa.jpeg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">FRNG</h4>
+                  <h6 class="card-text">will save the planet</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="images/photo_2020-10-24 18.03.18.jpeg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">FRUITS</h4>
+                  <h6 class="card-text">is the seed-bearing structure in flowering plants</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="images/photo_2020-10-24 18.03.29.jpeg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">SPORT</h4>
+                  <h6 class="card-text">includes all forms of competitive physical activity</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="images/photo_2020-10-24 18.03.40.jpeg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">KNOWLEDGE</h4>
+                  <h6 class="card-text">is the best power</h6>
+                  <a href="#" class="btn btn-outline-secondary">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
