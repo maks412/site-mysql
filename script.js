@@ -1,27 +1,34 @@
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-    document.getElementsByTagName("*").style.opacity = "0.5";
-    document.getElementsByClassName("form-popup").style.opacity = "1";
-  }
-  
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
 
-
-  function showCustomer(str) {
-    var xhttp; 
-    if (str == "") {
-      document.getElementById("txtHint").innerHTML = "";
-      return;
+  function popup(){
+    var btn = document.getElementById("btn_white").innerHTML;
+    if(btn == "Log In"){
+      document.querySelector(".popup").style.display = "flex";
+      $(".popup").animate({opacity: '1'} , "slow");
+      document.body.style.overflow = "hidden";
     }
-    xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("txtHint").innerHTML = this.responseText;
-      }
-    };
-    xhttp.open("GET", "con.php?q="+str, true);
-    xhttp.send();
+    else{
+      logout();
+    }
   }
-  
+
+  function close_popup(){
+    $(".popup").animate({opacity: '0'}, "slow");
+    document.body.style.margin = "0";
+    document.body.style.height = "100%";
+    document.body.style.overflow = "scroll";
+    document.getElementById("username").value = "";
+    document.getElementById("pass").value = "";
+    document.querySelector(".popup").style.display = "none";
+  }
+
+function login(name){
+  document.querySelector(".user_profile").style.display = "inline";
+  document.getElementById("user_name").innerHTML = name;
+  document.getElementById("btn_white").innerHTML = "Log Out";
+  close_popup();
+}
+
+function logout(){
+  document.querySelector(".user_profile").style.display = "none";
+  document.getElementById("btn_white").innerHTML = "Log In";
+}

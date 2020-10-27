@@ -7,34 +7,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
     <div class="pic">
+        <div class="user_profile">
+            <img id="profile_img" src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png" alt="">
+            <p id="user_name"></p>
+        </div>
         <h1>Welcome to FRNG</h1>
         <div class="word">
             <p>FRNG "flower energy"</p>
             <p>by Elnura</p>
         </div>
         <div class="bt">
-            <button id="btn_white" onclick="openForm()" class="btn btn-outline-light btn-lg">JOIN or LogIn</button>
+            <button id="btn_white" onclick="popup()" class="btn btn-outline-light btn-lg">Log In</button>
         </div>
     </div>
 
-    <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-          <h1>Login</h1>
-      
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-      
-          <button type="submit" class="btn" onclick="showCustomer(email)">Login</button>
-          <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-      </div>
+    <div class="popup">
+        <div class="popup-content">
+            <img onclick="close_popup()" src="images/close.jpg" alt="" class="closed" width="7%">
+            <img src="images/logo.jpeg" alt="logo" width="10%">
+            <input id="username" type="text" placeholder="Username" name="username" required>
+            <input id="pass" type="password" placeholder="Password" name="pass" required>
+            <button onclick="login(username.value)" class="btn btn-outline-dark">Login</button>
+        </div>
+    </div>
+
+    
 
     <h2 id="txtHint"></h2>
 
